@@ -15,12 +15,6 @@ class Preprocessor:
         self.lemmatizer = WordNetLemmatizer()
 
     def clean_text(self, text):
-        # Ensure text is a string before processing
-        if isinstance(text, list):
-            text = ' '.join(text)  # Convert list to string
-        elif not isinstance(text, str):
-            raise ValueError(f"Unexpected type for text: {type(text)}") # why it is not string???
-
         # Tokenize text
         tokens = word_tokenize(text.lower())
         # Remove punctuation and stopwords
