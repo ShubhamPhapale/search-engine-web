@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-<form method="post" action="/">
-    <input type="text" name="query" placeholder="Enter your search query..." required>
-    <button type="submit">Search</button>
-</form>
+<div class="search-container">
+    <form method="post" action="/">
+        <input type="text" name="query" placeholder="Enter your search query..." required>
+        <button type="submit">Search</button>
+    </form>
+</div>
 {% endblock %}
