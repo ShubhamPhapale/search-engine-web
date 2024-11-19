@@ -1,0 +1,71 @@
+A branch, jump or transfer  is an instruction in a computer program that can cause a computer to begin executing a different instruction sequence and thus deviate from its default behavior of executing instructions in order. Branch (or branching, branched) may also refer to the act of switching execution to a different instruction sequence as a result of executing a branch instruction. Branch instructions are used to implement control flow in program loops and conditionals (i.e., executing a particular sequence of instructions only if certain conditions are satisfied).
+A branch instruction can be either an unconditional branch, which always results in branching, or a conditional branch, which may or may not cause branching depending on some condition. Also, depending on how it specifies the address of the new instruction sequence (the "target" address), a branch instruction is generally classified as direct, indirect or relative, meaning that the instruction contains the target address, or it specifies where the target address is to be found (e.g., a register or memory location), or it specifies the difference between the current and target addresses.
+
+
+== Implementation ==
+Branch instructions can alter the contents of the CPU's Program Counter (or PC) (or Instruction Pointer on Intel microprocessors). The PC maintains the memory address of the next machine instruction to be fetched and executed. Therefore, a branch, if executed, causes the CPU to execute code from a new memory address, changing the program logic according to the algorithm planned by the programmer.
+One type of machine level branch is the jump instruction. These may or may not result in the PC being loaded or modified with some new, different value other than what it ordinarily would have been (being incremented past the current instruction to point to the following, next instruction). Jumps typically have unconditional and conditional forms where the latter may be taken or not taken (the PC is modified or not) depending on some condition.
+The second type of machine level branch is the call instruction which is used to implement subroutines. Like jump instructions, calls may or may not modify the PC according to condition codes, however, additionally a return address is saved in a secure place in memory (usually in a memory resident data structure called a stack). Upon completion of the subroutine, this return address is restored to the PC, and so program execution resumes with the instruction following the call instruction.
+The third type of machine level branch is the return instruction. This "pops" a return address off the stack and loads it into the PC register, thus returning control to the calling routine. Return instructions may also be conditionally executed. This description pertains to ordinary practice; however, the machine programmer has considerable powers to manipulate the return address on the stack, and so redirect program execution in any number of different ways.
+Depending on the processor, jump and call instructions may alter the contents of the PC register in different ways. An absolute address may be loaded, or the current contents of the PC may have some value (or displacement) added or subtracted from its current value, making the destination address relative to the current place in the program. The source of the displacement value may vary, such as an immediate value embedded within the instruction, or the contents of a processor register or memory location, or the contents of some location added to an index value.
+The term branch can also be used when referring to programs in high-level programming languages. In these branches usually take the form of conditional statements of various forms that encapsulate the instruction sequence that will be executed if the conditions are satisfied. Unconditional branch instructions such as GOTO are used to unconditionally jump to a different instruction sequence. If the algorithm requires a conditional branch, the GOTO (or GOSUB subroutine call) is preceded by an IF-THEN statement specifying the condition(s). All high level languages support algorithms that can re-use code as a loop, a control structure that repeats a sequence of instructions until some condition is satisfied that causes the loop to terminate. Loops also qualify as branch instructions. At the machine level, loops are implemented as ordinary conditional jumps that redirect execution to repeating code.
+In CPUs with flag registers, an earlier instruction sets a condition in the flag register. The earlier instruction may be arithmetic, or a logic instruction.  It is often close to the branch, though not necessarily the instruction immediately before the branch.  The stored condition is then used in a branch such as jump if overflow-flag set. This temporary information is often stored in a flag register but may also be located elsewhere.  A flag register design is simple in slower, simple computers. In fast computers a flag register can place a bottleneck on speed, because instructions that could otherwise operate in parallel (in several execution units) need to set the flag bits in a particular sequence.
+There are also machines (or particular instructions) where the condition may be checked by the jump instruction itself, such as branch <label> if register X negative. In simple computer designs, comparison branches execute more arithmetic and can use more power than flag register branches. In fast computer designs comparison branches can run faster than flag register branches, because comparison branches can access the registers with more parallelism, using the same CPU mechanisms as a calculation.
+Some early and simple CPU architectures, still found in microcontrollers, may not implement a conditional jump, but rather only a conditional "skip the next instruction" operation. A conditional jump or call is thus implemented as a conditional skip of an unconditional jump or call instruction.
+
+
+=== Examples ===
+Depending on the computer architecture, the assembly language mnemonic for a jump instruction is typically some shortened form of the word jump or the word branch, often along with other informative letters (or an extra parameter) representing the condition. Sometimes other details are included as well, such as the range of the jump (the offset size) or a special addressing mode that should be used to locate the actual effective offset.
+This table lists the machine level branch or jump instructions found in several well-known architectures:
+
+* x86, the PDP-11, VAX, and some others, set the carry-flag to signal borrow and clear the carry-flag to signal no borrow. ARM, 6502, the PIC, and some others, do the opposite for subtractive operations. This inverted function of the carry flag for certain instructions is marked by (*), that is, borrow=not carry in some parts of the table, but if not otherwise noted, borrow≡carry. However, carry on additive operations are handled the same way by most architectures.
+
+
+== Performance problems with branch instructions ==
+To achieve high performance, modern processors are pipelined. They consist of multiple parts that each partially process an instruction, feed their results to the next stage in the pipeline, and start working on the next instruction in the program. This design expects instructions to execute in a particular unchanging sequence. Conditional branch instructions make it impossible to know this sequence.  So conditional branches can cause "stalls" in which the pipeline has to be restarted on a different part of the program.
+
+
+== Improving performance by reducing stalls from branches ==
+Several techniques improve speed by reducing stalls from conditional branches.
+
+
+=== Branch prediction hints ===
+Historically, branch prediction took statistics, and used the result to optimize code.  A programmer would compile a test version of a program, and run it with test data.  The test code counted how the branches were actually taken. The statistics from the test code were then used by the compiler to optimize the branches of released code. The optimization would arrange that the fastest branch direction (taken or not) would always be the most frequently taken control flow path. To permit this, CPUs must be designed with (or at least have) predictable branch timing. Some CPUs have instruction sets (such as the Power ISA) that were designed with "branch hints" so that a compiler can tell a CPU how each branch is to be taken.
+The problem with software branch prediction is that it requires a complex software development process.
+
+
+=== Hardware branch predictors ===
+To run any software, hardware branch predictors moved the statistics into the electronics. Branch predictors are parts of a processor that guess the outcome of a conditional branch. Then the processor's logic gambles on the guess by beginning to execute the expected instruction flow. An example of a simple hardware branch prediction scheme is to assume that all backward branches (i.e. to a smaller program counter) are taken (because they are part of a loop), and all forward branches (to a larger program counter) are not taken (because they leave a loop). Better branch predictors are developed and validated statistically by running them in simulation on a variety of test programs.  Good predictors usually count the outcomes of previous executions of a branch. Faster, more expensive computers can then run faster by investing in better branch prediction electronics. In a CPU with hardware branch prediction, branch hints let the compiler's presumably superior branch prediction override the hardware's more simplistic branch prediction.
+
+
+=== Branch-free code ===
+Some logic can be written without branches or with fewer branches. It is often possible to use bitwise operations, conditional moves or other predication instead of branches. In fact, branch-free code is a must for cryptography due to timing attacks.
+
+
+=== Delay slot ===
+
+Another technique is a branch delay slot. In this approach, at least one instruction following a branch is always executed, with some exceptions such like the legacy MIPS architecture likely/unlikely branch instruction. Therefore, the computer can use this instruction to do useful work whether or not its pipeline stalls. This approach was historically popular in RISC computers. In a family of compatible CPUs, it complicates multicycle CPUs (with no pipeline), faster CPUs with longer-than-expected pipelines, and superscalar CPUs (which can execute instructions out of order.)
+
+
+== See also ==
+Branch delay slot
+Branch predication
+Branch table
+Conditional (programming)
+Control flow
+Indirect branch
+Program counter
+Subroutine
+Spaghetti code
+
+
+== Notes ==
+
+
+== References ==
+
+
+== External links ==
+Free IA-32 and x86-64 documentation, provided by Intel
+The PDP-11 FAQ
+The ARM instruction set

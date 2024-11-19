@@ -1,0 +1,64 @@
+Decomposition in computer science, also known as factoring, is breaking a complex problem or system into parts that are easier to conceive, understand, program, and maintain. 
+
+
+== Overview ==
+Different types of decomposition are defined in computer sciences:
+
+In structured programming, algorithmic decomposition breaks a process down into well-defined steps.
+Structured analysis breaks down a software system from the system context level to system functions and data entities as described by Tom DeMarco.
+Object-oriented decomposition breaks a large system down into progressively smaller classes or objects that are responsible for part of the problem domain.
+According to Booch, algorithmic decomposition is a necessary part of object-oriented analysis and design, but object-oriented systems start with and emphasize decomposition into objects.
+More generally, functional decomposition in computer science is a technique for mastering the complexity of the function of a model. A functional model of a system is thereby replaced by a series of functional models of subsystems.
+
+
+== Decomposition topics ==
+
+
+=== Decomposition paradigm ===
+A decomposition paradigm in computer programming is a strategy for organizing a program as a number of parts, and usually implies a specific way to organize a program text. Typically the aim of using a decomposition paradigm is to optimize some metric related to program complexity, for example a program's modularity or its maintainability.
+Most decomposition paradigms suggest breaking down a program into parts to minimize the static dependencies between those parts, and to maximize each part's cohesiveness. Popular decomposition paradigms include the procedural, modules, abstract data type, and object oriented paradigms.
+Though the concept of decomposition paradigm is entirely distinct from that of model of computation, they are often confused. For example, the functional model of computation is often confused with procedural decomposition, and the actor model of computation is often confused with object oriented decomposition.
+
+
+=== Decomposition diagram ===
+
+		
+			
+			
+		
+		
+			
+			
+		
+		
+			
+			
+		
+		
+			
+			
+		
+
+A decomposition diagram shows a complex, process, organization, data subject area, or other type of object broken down into lower level, more detailed components. For example, decomposition diagrams may represent organizational structure or functional decomposition into processes. Decomposition diagrams provide a logical hierarchical decomposition of a system.
+
+
+== See also ==
+Code refactoring
+Component-based software engineering
+Dynamization
+Duplicate code
+Event partitioning
+How to Solve It
+Integrated Enterprise Modeling
+Personal information management
+Readability
+Subroutine
+
+
+== References ==
+
+
+== External links ==
+
+Object Oriented Analysis and Design
+On the Criteria To Be Used in Decomposing Systems into Modules

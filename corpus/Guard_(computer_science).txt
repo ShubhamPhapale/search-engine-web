@@ -1,0 +1,126 @@
+In computer programming, a guard is a Boolean expression that must evaluate to true if the execution of the program is to continue in the branch in question. Regardless of which programming language is used, a guard clause, guard code, or guard statement is a check of integrity preconditions used to avoid errors during execution.
+
+
+== Uses ==
+A typical example is checking that a reference about to be processed is not null, which avoids null-pointer failures.
+
+Other uses include using a Boolean field for idempotence (so subsequent calls are nops), as in the dispose pattern.
+
+
+=== Flatter code with less nesting ===
+The guard provides an early exit from a subroutine, and is a commonly used deviation from structured programming, removing one level of nesting and resulting in flatter code: replacing if guard { ... } with if not guard: return; ....
+Using guard clauses can be a refactoring technique to improve code. In general, less nesting is good, as it simplifies the code and reduces cognitive burden.
+For example, in Python:
+
+Another example, written in C:
+
+
+== Terminology ==
+The term is used with specific meaning in APL, Haskell, Clean, Erlang, occam, Promela, OCaml, Swift, Python from version 3.10, and Scala programming languages. In Mathematica, guards are called constraints. Guards are the fundamental concept in Guarded Command Language, a language in formal methods. Guards can be used to augment pattern matching with the possibility to skip a pattern even if the structure matches. Boolean expressions in conditional statements usually also fit this definition of a guard although they are called conditions.
+
+
+== Mathematics ==
+In the following Haskell example, the guards occur between each pair of "|" and "=":
+
+This is similar to the respective mathematical notation:
+
+  
+    
+      
+        f
+        (
+        x
+        )
+        =
+        
+          {
+          
+            
+              
+                
+                  1
+                
+                
+                  
+                    
+                      if 
+                    
+                  
+                  x
+                  >
+                  0
+                
+              
+              
+                
+                  0
+                
+                
+                  
+                    
+                      otherwise
+                    
+                  
+                
+              
+            
+          
+          
+        
+      
+    
+    {\displaystyle f(x)=\left\{{\begin{matrix}1&{\mbox{if }}x>0\\0&{\mbox{otherwise}}\end{matrix}}\right.}
+  
+
+In this case the guards are in the "if" and "otherwise" clauses.
+
+
+== Multiple guards ==
+If there are several parallel guards, they are normally tried in a top-to-bottom order, and the branch of the first to pass is chosen. Guards in a list of cases are typically parallel.
+However, in Haskell list comprehensions the guards are in series, and if any of them fails, the list element is not produced. This would be the same as combining the separate guards with logical AND, except that there can be other list comprehension clauses among the guards.
+
+
+== Evolution ==
+A simple conditional expression, already present in CPL in 1963, has a guard on first sub-expression, and another sub-expression to use in case the first one cannot be used. Some common ways to write this:
+
+(x>0) -> 1/x; 0
+x>0 ? 1/x : 0
+
+If the second sub-expression can be a further simple conditional expression, we can give more alternatives to try before the last fall-through:
+
+(x>0) -> 1/x; (x<0) -> -1/x; 0
+
+In 1966 ISWIM had a form of conditional expression without an obligatory fall-through case, thus separating guard from the concept of choosing either-or. In the case of ISWIM, if none of the alternatives could be used, the value was to be undefined, which was defined to never compute into a value.
+KRC, a "miniaturized version" of SASL (1976), was one of the first programming languages to use the term "guard". Its function definitions could have several clauses, and the one to apply was chosen based on the guards that followed each clause:
+
+Use of guard clauses, and the term "guard clause", dates at least to Smalltalk practice in the 1990s, as codified by Kent Beck.
+
+In 1996, Dyalog APL adopted an alternative pure functional style in which the guard is the only control structure. This example, in APL, computes the parity of the input number:
+
+
+== Pattern guard ==
+In addition to a guard attached to a pattern, pattern guard can refer to the use of pattern matching in the context of a guard. In effect, a match of the pattern is taken to mean pass. This meaning was introduced in a proposal for Haskell by Simon Peyton Jones titled A new view of guards in April 1997 and was used in the implementation of the proposal. The feature provides the ability to use patterns in the guards of a pattern.
+An example in extended Haskell:
+
+This would read: "Clunky for an environment and two variables, in case the lookups of the variables from the environment produce values, is the sum of the values. ..." As in list comprehensions, the guards are in series, and if any of them fails the branch is not taken.
+
+
+== See also ==
+Assertion
+Guarded Command Language, a programming language based on non-deterministic conditionals
+Guarded suspension
+Iverson bracket
+Logical conditional
+Sentinel node, an object to represent the end of a data structure
+Switch statement
+
+
+== References ==
+
+
+== External links ==
+Guard in Free On-Line Dictionary of Computing - FOLDOC, Denis Howe (editor).
+Guard Clause, WikiWikiWeb
+The Haskell 98 Report, chapter 3 Expressions.
+The Mathematica Book, section 2.3.5 Putting Constraints on Patterns
+The Glorious Glasgow Haskell Compilation System User's Guide, Version 6.4, section 7.3.2. Pattern guards

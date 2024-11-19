@@ -1,0 +1,32 @@
+The Advanced Placement (AP) Computer Science (shortened to AP Comp Sci or APCS) program includes two Advanced Placement courses and examinations covering the field of computer science. They are offered by the College Board to high school students as an opportunity to earn college credit for college-level courses. The program consists of two current courses (Computer Science Principles and Computer Science A) and one discontinued course (Computer Science AB).
+AP Computer Science was taught using Pascal for the 1984–1998 exams, C++ for 1999–2003, and Java since 2004.
+
+
+== Courses ==
+There are two AP computer science courses currently offered. Computer Science Principles is considered to be a more "big picture" course than the programming-intensive Computer Science A.
+
+
+=== AP Computer Science A ===
+AP Computer Science A is a programming-based course, equivalent to a first-semester–level college course. AP CSA emphasizes object-oriented programming and is taught using the programming language of Java. The course has an emphasis on problem-solving using data structures and algorithms.
+
+
+=== AP Computer Science Principles ===
+AP Computer Science Principles is an introductory college-level course in computer science with an emphasis on computational thinking and the impacts of computing. The course has no designated programming language, and teaches algorithms and programming, complementing Computer Science A.
+
+
+=== AP Computer Science AB (discontinued) ===
+
+AP Computer Science AB included all the topics of AP Computer Science A, as well as a more formal and a more in-depth study of algorithms, data structures, and data abstraction. For example, binary trees were studied in AP Computer Science AB but not in AP Computer Science A. The use of recursive data structures and dynamically allocated structures were fundamental to AP Computer Science AB. 
+AP Computer Science AB was equivalent to a full-year college course.  
+Due to low numbers of students taking the exam, AP Computer Science AB was discontinued following the May 2009 exam administration.
+
+
+== See also ==
+Computer science education
+
+
+== References ==
+
+
+== Further reading ==
+Havard, Douglas D.; Howard, Keith E. (February 28, 2019). "All Advanced Placement (AP) Computer Science is Not Created Equal: A Comparison of AP Computer Science A and Computer Science Principles". Journal of Computer Science Integration. 2 (1) 2: 16–34. doi:10.26716/jcsi.2019.02.1.2.

@@ -1,0 +1,81 @@
+In computer science, a record (also called a structure,  struct, or compound data type) is a composite data structure – a collection of fields, possibly of different data types, typically fixed in number and sequence.
+For example, a date could be stored as a record containing a numeric year field, a month field represented as a string, and a numeric day-of-month field. A circle record might contain a numeric radius and a center that is a point record containing x and y coordinates.
+Notable applications include the programming language record type and for row-based storage, data organized as a sequence of records, such as a database table, spreadsheet or comma-separated values (CSV) file. In general, a record type value is stored in memory and row-based storage is in mass storage.
+A record type is a data type that describes such values and variables. Most modern programming languages allow the programmer to define new record types. The definition includes specifying the data type of each field and an identifier (name or label) by which it can be accessed.  In type theory, product types (with no field names) are generally preferred due to their simplicity, but proper record types are studied in languages such as System F-sub.  Since type-theoretical records may contain first-class function-typed fields in addition to data, they can express many features of object-oriented programming.
+
+
+== Terminology ==
+In the context of storage such as in a database or spreadsheet a record is often called a row and each field is called a column.
+In object-oriented programming, an object is a record that contains state and method fields.
+A record is similar to a mathematical tuple, although a tuple may or may not be considered a record, and vice versa, depending on conventions and the programming language. In the same vein, a record type can be viewed as the computer language analog of the Cartesian product of two or more mathematical sets, or the implementation of an abstract product type in a specific language.
+A record differs from an array in that a record's elements (fields) are determined by the definition of the record, and may be heterogeneous whereas an array is a collection of elements with the same type.
+The parameters of a function can be viewed collectively as the fields of a record and passing arguments to the function can be viewed as assigning the input parameters to the record fields. At a low-level, a function call includes an activation record or call frame, that contains the parameters as well as other fields such as local variables and the return address.
+
+
+== History ==
+
+The concept of a record can be traced to various types of tables and ledgers used in accounting since remote times.  The modern notion of records in computer science, with fields of well-defined type and size, was already implicit in 19th century mechanical calculators, such as Babbage's Analytical Engine.
+
+The original machine-readable medium used for data (as opposed to control) was the punch card used for records in the 1890 United States Census: each punch card was a single record. Compare the journal entry from 1880 and the punch card from 1895. Records were well-established in the first half of the 20th century, when most data processing was done using punched cards. Typically, each record of a data file would be recorded on one punched card, with specific columns assigned to specific fields. Generally, a record was the smallest unit that could be read from external storage (e.g., card reader, tape, or disk). The contents of punchcard-style records were originally called "unit records" because punchcards had pre-determined document lengths. When storage systems became more advanced with the use of hard drives and magnetic tape, variable-length records became the standard. A variable-length record is a record in which the size of the record in bytes is approximately equal to the sum of the sizes of its fields. This was not possible to do before more advanced storage hardware was invented because all of the punchcards had to conform to pre-determined document lengths that the computer could read, since at the time the cards had to be physically fed into a machine. 
+Most machine language implementations and early assembly languages did not have special syntax for records, but the concept was available (and extensively used) through the use of index registers, indirect addressing, and self-modifying code. Some early computers, such as the IBM 1620, had hardware support for delimiting records and fields, and special instructions for copying such records.
+The concept of records and fields was central in some early file sorting and tabulating utilities, such as IBM's Report Program Generator (RPG).
+COBOL was the first widespread programming language to support record types, and its record definition facilities were quite sophisticated at the time. The language allows for the definition of nested records with alphanumeric, integer, and fractional fields of arbitrary size and precision, and fields that automatically format any value assigned to them (e.g., insertion of currency signs, decimal points, and digit group separators). Each file is associated with a record variable where data is read into or written from. COBOL also provides a MOVE CORRESPONDING statement that assigns corresponding fields of two records according to their names.
+The early languages developed for numeric computing, such as FORTRAN (up to FORTRAN IV) and ALGOL 60, did not support record types; but later versions of those languages, such as FORTRAN 77 and ALGOL 68 did add them. The original Lisp programming language too was lacking records (except for the built-in cons cell), but its S-expressions provided an adequate surrogate. The Pascal programming language was one of the first languages to fully integrate record types with other basic types into a logically consistent type system. The PL/I language provided for COBOL-style records. The C language provides the record concept using structs. Most languages designed after Pascal (such as Ada, Modula, and Java), also supported records.
+Although records are not often used in their original context anymore (i.e. being used solely for the purpose of containing data), records influenced  newer object-oriented programming languages and relational database management systems. Since records provided more modularity in the way data was stored and handled, they are better suited at representing complex, real-world concepts than the primitive data types provided by default in languages. This influenced later languages such as C++, Python, JavaScript, and Objective-C which address the same modularity needs of programming. Objects in these languages are essentially records with the addition of methods and inheritance, which allow programmers to manipulate the way data behaves instead of only the contents of a record. Many programmers regard records as obsolete now since object-oriented languages have features that far surpass what records are capable of. On the other hand, many programmers argue that the low overhead and ability to use records in assembly language make records still relevant when programming with low levels of abstraction. Today, the most popular languages on the TIOBE index, an indicator of the popularity of programming languages, have been influenced in some way by records due to the fact that they are object oriented. Query languages such as SQL and Object Query Language were also influenced by the concept of records. These languages allow the programmer to store sets of data, which are essentially records, in tables. This data can then be retrieved using a primary key. The tables themselves are also records which may have a foreign key: a key that references data in another table.   
+
+
+== Record type ==
+
+
+=== Operations ===
+Operations for a record type include:
+
+Declaration of a record type, including the position, type, and (possibly) name of each field
+Declaration of a record; a variable typed as a record type
+Construction of a record value; possibly with field value initialization
+Read and write record field value
+Comparison of two records for equality
+Computation of a standard hash value for the record
+Some languages provide facilities that enumerate the fields of a record. This facility is needed to implement certain services such as debugging, garbage collection, and serialization. It requires some degree of type polymorphism.
+In contexts that support record subtyping, operations include adding and removing fields of a record. A specific record type implies that a specific set of fields are present, but values of that type may contain additional fields. A record with fields x, y, and z would thus belong to the type of records with fields x and y, as would a record with fields x, y, and r. The rationale is that passing an (x,y,z) record to a function that expects an (x,y) record as argument should work, since that function will find all the fields it requires within the record. Many ways of practically implementing records in programming languages would have trouble with allowing such variability, but the matter is a central characteristic of record types in more theoretical contexts.
+
+
+==== Assignment and comparison ====
+Most languages allow assignment between records that have exactly the same record type (including same field types and names, in the same order). Depending on the language, however, two record data types defined separately may be regarded as distinct types even if they have exactly the same fields.
+Some languages may also allow assignment between records whose fields have different names, matching each field value with the corresponding field variable by their positions within the record; so that, for example, a complex number with fields called real and imag can be assigned to a 2D point record variable with fields X and Y.  In this alternative, the two operands are still required to have the same sequence of field types.  Some languages may also require that corresponding types have the same size and encoding as well, so that the whole record can be assigned as an uninterpreted bit string.  Other languages may be more flexible in this regard, and require only that each value field can be legally assigned to the corresponding variable field; so that, for example, a short integer field can be assigned to a long integer field, or vice versa.
+Other languages (such as COBOL) may match fields and values by their names, rather than positions.
+These same possibilities apply to the comparison of two record values for equality.  Some languages may also allow order comparisons ('<'and '>'), using the lexicographic order based on the comparison of individual fields.
+PL/I allows both of the preceding types of assignment, and also allows structure expressions, such as a = a+1; where "a" is a record, or structure in PL/I terminology.
+
+
+==== Algol 68's distributive field selection ====
+In Algol 68, if Pts was an array of records, each with integer fields X and Y, one could write Y of Pts to obtain an array of integers, consisting of the Y fields of all the elements of Pts.  As a result, the statements Y of Pts[3] := 7 and (Y of Pts)[3] := 7 would have the same effect.
+
+
+==== Pascal's "with" statement ====
+In Pascal, the command with R do S would execute the command sequence S as if all the fields of record R had been declared as variables. Similarly to entering a different namespace in an object-oriented language like C#, it is no longer necessary to use the record name as a prefix to access the fields. So, instead of writing Pt.X := 5; Pt.Y := Pt.X + 3 one could write with Pt do begin X := 5; Y := X + 3 end.
+
+
+=== Representation in memory ===
+The representation of a record in memory varies depending on the programming language. Often, fields are stored in consecutive memory locations, in the same order as they are declared in the record type. This may result in two or more fields stored into the same word of memory; indeed, this feature is often used in systems programming to access specific bits of a word. On the other hand, most compilers will add padding fields, mostly invisible to the programmer, in order to comply with alignment constraints imposed by the machine—say, that a floating point field must occupy a single word.
+Some languages may implement a record as an array of addresses pointing to the fields (and, possibly, to their names and/or types). Objects in object-oriented languages are often implemented in rather complicated ways, especially in languages that allow multiple class inheritance.
+
+
+=== Self-defining records ===
+A self-defining record is a type of record which contains information to identify the record type and to locate information within the record.  It may contain the offsets of elements; the elements can therefore be stored in any order or may be omitted. The information stored in a self-defining record can be interpreted as metadata for the record, which is similar to what one would expect to find in the UNIX metadata regarding a file, containing information such as the record's creation time and the size of the record in bytes. Alternatively, various elements of the record, each including an element identifier, can simply follow one another in any order.
+
+
+== Key field ==
+A record, especially in the context of row-based storage, may include key fields that allow indexing the records of a collection. A primary key is unique throughout all stored records; only one of this key exists. In other words, no duplicate may exist for any primary key. For example, an employee file might contain employee number, name, department, and salary. The employee number will be unique in the organization and will be the primary key. Depending on the storage medium and file organization, the employee number might be indexed—that is also stored in a separate file to make the lookup faster. The department code is not necessarily unique; it may also be indexed, in which case it would be considered a secondary key, or alternate key. If it is not indexed, the entire employee file would have to be scanned to produce a listing of all employees in a specific department. Keys are usually chosen in a way that minimizes the chances of multiple values being feasibly mapped to by one key. For example, the salary field would not normally be considered usable as a key since many employees will likely have the same salary.
+
+
+== See also ==
+Block (data storage) – Sequence of bits or bytes of a maximum predetermined size
+Composite data type – any data type which can be constructed in a program using the programming language's primitive data types and other composite typesPages displaying wikidata descriptions as a fallback
+Data hierarchy – systematic organization of data in a hierarchical form showing relationships between smaller and larger componentsPages displaying wikidata descriptions as a fallback
+Object composition – Method in computer programming of forming higher-level object types
+Passive data structure – Another term for record
+Union type – Data type that allows for values that are one of multiple different data types
+
+
+== References ==

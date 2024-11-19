@@ -1,0 +1,23 @@
+In computer science, a concern is a particular set of information that has an effect on the code of a computer program. A concern can be as general as the details of database interaction or as specific as performing a primitive calculation, depending on the level of conversation between developers and the program being discussed. IBM uses the term concern space to describe the sectioning of conceptual information.
+
+
+== Overview ==
+Usually the code can be separated into logical sections, each addressing separate concerns, and so it hides the need for a given section to know particular information addressed by a different section. This leads to a modular program. Edsger W. Dijkstra coined the term "separation of concerns" to describe the mentality behind this modularization, which allows the programmer to reduce the complexity of the system being designed. Two different concerns that intermingle in the same section of code are called "highly coupled". Sometimes the chosen module divisions do not allow for one concern to be completely separated from another, resulting in cross-cutting concerns. The various programming paradigms address the issue of cross-cutting concerns to different degrees. Data logging is a common cross-cutting concern, being used in many other parts of the program other than the particular module(s) that actually log the data. Since changes to the logging code can affect other sections, it could introduce bugs in the operation of the program.
+Paradigms that specifically address the issue of concern separation:
+
+Object-oriented programming, describing concerns as objects
+Functional programming, describing concerns as functions
+Aspect-oriented software development, treating concerns and their interaction as constructs of their own standing
+
+
+== See also ==
+Cross-cutting concern
+Separation of concerns
+Issue (computers), a unit of work to accomplish an improvement in a data system
+
+
+== References ==
+
+
+== External links ==
+Concerns in Rails, by DHH, the Rails creator

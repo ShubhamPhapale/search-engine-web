@@ -1,0 +1,430 @@
+In theoretical computer science a simulation is a relation between state transition systems associating systems that behave in the same way in the sense that one system simulates the other.
+Intuitively, a system simulates another system if it can match all of its moves.
+The basic definition relates states within one transition system, but this is easily adapted to relate two separate transition systems by building a system consisting of the disjoint union of the corresponding components.
+
+
+== Formal definition ==
+Given a labelled state transition system (
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+, 
+  
+    
+      
+        Λ
+      
+    
+    {\displaystyle \Lambda }
+  
+, →),
+where 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+ is a set of states, 
+  
+    
+      
+        Λ
+      
+    
+    {\displaystyle \Lambda }
+  
+ is a set of labels and → is a set of labelled transitions (i.e., a subset of 
+  
+    
+      
+        S
+        ×
+        Λ
+        ×
+        S
+      
+    
+    {\displaystyle S\times \Lambda \times S}
+  
+),
+a relation 
+  
+    
+      
+        R
+        ⊆
+        S
+        ×
+        S
+      
+    
+    {\displaystyle R\subseteq S\times S}
+  
+ is a simulation if and only if for every pair of states 
+  
+    
+      
+        (
+        p
+        ,
+        q
+        )
+      
+    
+    {\displaystyle (p,q)}
+  
+ in 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ and all labels λ in 
+  
+    
+      
+        Λ
+      
+    
+    {\displaystyle \Lambda }
+  
+:
+
+if 
+  
+    
+      
+        p
+        
+          
+            →
+            λ
+          
+        
+        
+          p
+          ′
+        
+      
+    
+    {\displaystyle p{\overset {\lambda }{\rightarrow }}p'}
+  
+, then there is 
+  
+    
+      
+        q
+        
+          
+            →
+            λ
+          
+        
+        
+          q
+          ′
+        
+      
+    
+    {\displaystyle q{\overset {\lambda }{\rightarrow }}q'}
+  
+ such that 
+  
+    
+      
+        (
+        
+          p
+          ′
+        
+        ,
+        
+          q
+          ′
+        
+        )
+        ∈
+        R
+      
+    
+    {\displaystyle (p',q')\in R}
+  
+
+Equivalently, in terms of relational composition:
+
+  
+    
+      
+        
+          R
+          
+            −
+            1
+          
+        
+        
+        ;
+        
+        
+          
+            →
+            λ
+          
+        
+        
+        
+          ⊆
+        
+        
+        
+          
+            →
+            λ
+          
+        
+        
+        ;
+        
+        
+          R
+          
+            −
+            1
+          
+        
+      
+    
+    {\displaystyle R^{-1}\,;\,{\overset {\lambda }{\rightarrow }}\quad {\subseteq }\quad {\overset {\lambda }{\rightarrow }}\,;\,R^{-1}}
+  
+
+Given two states 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ and 
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+ in 
+  
+    
+      
+        S
+      
+    
+    {\displaystyle S}
+  
+, 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ can be simulated by 
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+, written 
+  
+    
+      
+        p
+        
+        ≤
+        
+        q
+      
+    
+    {\displaystyle p\,\leq \,q}
+  
+, if and only if there is a simulation 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+ such that 
+  
+    
+      
+        (
+        p
+        ,
+        q
+        )
+        ∈
+        R
+      
+    
+    {\displaystyle (p,q)\in R}
+  
+. The relation 
+  
+    
+      
+        ≤
+      
+    
+    {\displaystyle \leq }
+  
+ is called the simulation preorder, and it is the union of all simulations: 
+  
+    
+      
+        (
+        p
+        ,
+        q
+        )
+        ∈
+        
+        ≤
+        
+      
+    
+    {\displaystyle (p,q)\in \,\leq \,}
+  
+ precisely when 
+  
+    
+      
+        (
+        p
+        ,
+        q
+        )
+        ∈
+        R
+      
+    
+    {\displaystyle (p,q)\in R}
+  
+ for some simulation 
+  
+    
+      
+        R
+      
+    
+    {\displaystyle R}
+  
+.
+The set of simulations is closed under union; therefore, the simulation preorder is itself a simulation. Since it is the union of all simulations, it is the unique largest simulation. Simulations are also closed under reflexive and transitive closure; therefore, the largest simulation must be reflexive and transitive. From this follows that the largest simulation—the simulation preorder—is indeed a preorder relation. Note that there can be more than one relation that is both a simulation and a preorder; the term simulation preorder refers to the largest one of them (which is a superset of all the others).
+Two states 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ and 
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+ are said to be similar, written 
+  
+    
+      
+        p
+        ≤≥
+        q
+      
+    
+    {\displaystyle p\leq \geq q}
+  
+, if and only if 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+ can be simulated by 
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+ and 
+  
+    
+      
+        q
+      
+    
+    {\displaystyle q}
+  
+ can be simulated by 
+  
+    
+      
+        p
+      
+    
+    {\displaystyle p}
+  
+. Similarity is thus the maximal symmetric subset of the simulation preorder, which means it is reflexive, symmetric, and transitive; hence an equivalence relation. However, it is not necessarily a simulation, and precisely in those cases when it is not a simulation, it is strictly coarser than bisimilarity (meaning it is a superset of bisimilarity).
+To witness, consider a similarity that is a simulation. Since it is symmetric, it is a bisimulation. It must then be a subset of bisimilarity, which is the union of all bisimulations. Yet it is easy to see that similarity is always a superset of bisimilarity. From this follows that if similarity is a simulation, it equals bisimilarity. And if it equals bisimilarity, it is naturally a simulation (since bisimilarity is a simulation). Therefore, similarity is a simulation if and only if it equals bisimilarity. If it does not, it must be its strict superset; hence a strictly coarser equivalence relation.
+
+
+== Similarity of separate transition systems ==
+When comparing two different transition systems (S', Λ', →') and (S", Λ", →"), the basic notions of simulation and similarity can be used by forming the disjoint composition of the two machines, (S, Λ, →) with S = S' ∐ S", Λ = Λ' ∪ Λ" and → = →' ∪ →", where ∐ is the disjoint union operator between sets.
+
+
+== See also ==
+State transition system
+Bisimulation
+Coinduction
+Operational semantics
+
+
+== Notes ==
+
+
+== References ==
+Park, David (1981). "Concurrency and Automata on Infinite Sequences" (PDF). In Deussen, Peter (ed.). Proceedings of the 5th GI-Conference, Karlsruhe. Lecture Notes in Computer Science. Vol. 104. Springer-Verlag. pp. 167–183. doi:10.1007/BFb0017309. ISBN 978-3-540-10576-3.
+van Glabbeek, R. J. (2001). "The Linear Time – Branching Time Spectrum I: The Semantics of Concrete, Sequential Processes". Handbook of Process Algebra. Elsevier. pp. 3–99.

@@ -1,0 +1,14 @@
+The degree of Doctor of Computer Science (DCS, DCompSci, DSc.Comp, D.C.Sc.) is an applied research doctorate in computer science awarded on the basis of advanced study and research in the field of computer science. While it is considered a terminal degree and requires coursework and research beyond the masters' level, the DCS is not considered equivalent to a Ph.D. or a Doctor of Science (D.Sc. or Sc.D) in computer science.
+
+
+== Structure ==
+Typical entry requirements include master's degrees in computer science or a related field. The degree is intended for those who will make meaningful contributions to either the theory or practice of computing and as such involves both research and taught courses beyond master's degree level. Applied doctorates such as the DCS are aimed at practitioners with professional careers in the field rather than at those aiming for research careers in academia. The DCS is normally completed in three years, with a split of approximately two years of coursework and one year equivalent (36 credits out of a total of 96) spent on the dissertation.
+
+
+== Relationship to the Ph.D. ==
+Structurally, the Doctor of Computer Science differs from the PhD in that the DCS has, as noted above, a three-year duration, with only one year equivalent on the dissertation, while an American Ph.D. normally requires a minimum of four years, with at least three years spent on the dissertation.
+There are two active definitions of what comprises a research doctorate or similar in the U.S. The National Center for Education Statistics defines a Doctor's degree-research/scholarship as "A Ph.D. or other doctor's degree that requires advanced work beyond the master's level, including the preparation and defense of a dissertation based on original research, or the planning and execution of an original project demonstrating substantial artistic or scholarly achievement." The awarding institution defines which degrees meet this description themselves. The National Science Foundation defines a research doctorate as "a doctoral degree that (1) requires completion of an original intellectual contribution in the form of a dissertation or an equivalent culminating project (e.g., musical composition) and (2) is not primarily intended as a degree for the practice of a profession." Under this definition, the 
+DCS, which (as noted above) is intended for professionals in the field of computer science, is not recognized by the National Science Foundation as a research doctorate equivalent to a Ph.D. in Computer Science.
+
+
+== References ==

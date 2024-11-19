@@ -1,0 +1,200 @@
+This article is a list of notable unsolved problems in computer science. A problem in computer science is considered unsolved when no solution is known or when experts in the field disagree about proposed solutions.
+
+
+== Computational complexity ==
+
+P versus NP problem
+What is the relationship between BQP and NP?
+NC = P problem
+NP = co-NP problem
+P = BPP problem
+P = PSPACE problem
+L = NL problem
+PH = PSPACE problem
+L = P problem
+L = RL problem
+Unique games conjecture
+Is the exponential time hypothesis true?
+Is the strong exponential time hypothesis (SETH) true?
+Do one-way functions exist?
+Is public-key cryptography possible?
+Log-rank conjecture
+
+
+== Polynomial versus nondeterministic-polynomial time for specific algorithmic problems ==
+
+Can integer factorization be done in polynomial time on a classical (non-quantum) computer?
+Can the discrete logarithm be computed in polynomial time on a classical (non-quantum) computer?
+Can the shortest vector of a lattice be computed in polynomial time on a classical or quantum computer?
+Can the graph isomorphism problem be solved in polynomial time on a classical computer?
+Is graph canonization polynomial time equivalent to the graph isomorphism problem?
+Can leaf powers and k-leaf powers be recognized in polynomial time?
+Can parity games be solved in polynomial time?
+Can the rotation distance between two binary trees be computed in polynomial time?
+Can graphs of bounded clique-width be recognized in polynomial time?
+Can one find a simple closed quasigeodesic on a convex polyhedron in polynomial time?
+Can a simultaneous embedding with fixed edges for two given graphs be found in polynomial time?
+Can the square-root sum problem be solved in polynomial time in the Turing machine model?
+
+
+== Other algorithmic problems ==
+The dynamic optimality conjecture: Do splay trees have a bounded competitive ratio?
+Can a depth-first search tree be constructed in NC?
+Can the fast Fourier transform be computed in o(n log n) time?
+What is the fastest algorithm for multiplication of two n-digit numbers?
+What is the lowest possible average-case time complexity of Shellsort with a deterministic fixed gap sequence?
+Can 3SUM be solved in strongly sub-quadratic time, that is, in time O(n2−ϵ) for some ϵ>0?
+Can the edit distance between two strings of length n be computed in strongly sub-quadratic time?  (This is only possible if the strong exponential time hypothesis is false.)
+Can X + Y sorting be done in o(n2 log n) time?
+What is the fastest algorithm for matrix multiplication?
+Can all-pairs shortest paths be computed in strongly sub-cubic time, that is, in time O(V3−ϵ) for some ϵ>0?
+Can the Schwartz–Zippel lemma for polynomial identity testing be derandomized?
+Does linear programming admit a strongly polynomial-time algorithm?  (This is problem #9 in Smale's list of problems.)
+How many queries are required for envy-free cake-cutting?
+What is the algorithmic complexity of the minimum spanning tree problem? Equivalently, what is the decision tree complexity of the MST problem? The optimal algorithm to compute MSTs is known, but it relies on decision trees, so its complexity is unknown.
+Gilbert–Pollack conjecture: Is the Steiner ratio of the Euclidean plane equal to 
+  
+    
+      
+        2
+        
+          /
+        
+        
+          
+            3
+          
+        
+      
+    
+    {\displaystyle 2/{\sqrt {3}}}
+  
+?
+
+
+== Programming language theory ==
+
+POPLmark
+Barendregt–Geuvers–Klop conjecture
+
+
+== Other problems ==
+Is the Aanderaa–Karp–Rosenberg conjecture true?
+Černý Conjecture: If a deterministic finite automaton  with 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ states has a synchronizing word, must it have one of length at most 
+  
+    
+      
+        (
+        n
+        −
+        1
+        
+          )
+          
+            2
+          
+        
+      
+    
+    {\displaystyle (n-1)^{2}}
+  
+?
+Generalized star-height problem: Can all regular languages be expressed using generalized regular expressions with a limited nesting depth of Kleene stars?
+Separating words problem: How many states are needed in a deterministic finite automaton that behaves differently on two given strings of length 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+?
+What is the Turing completeness status of all unique elementary cellular automata?
+The problem to determine all positive integers 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ such that the concatenation of 
+  
+    
+      
+        n
+      
+    
+    {\displaystyle n}
+  
+ and 
+  
+    
+      
+        
+          n
+          
+            2
+          
+        
+      
+    
+    {\displaystyle n^{2}}
+  
+ in base 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ uses at most 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ distinct characters for 
+  
+    
+      
+        b
+      
+    
+    {\displaystyle b}
+  
+ and 
+  
+    
+      
+        k
+      
+    
+    {\displaystyle k}
+  
+ fixed and many other problems in the coding theory are also the unsolved problems in mathematics.
+
+
+== References ==
+
+
+== External links ==
+Open problems around exact algorithms by Gerhard J. Woeginger, Discrete Applied Mathematics 156 (2008) 397–405.
+The RTA list of open problems – open problems in rewriting.
+The TLCA List of Open Problems – open problems in area typed lambda calculus.

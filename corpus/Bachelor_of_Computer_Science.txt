@@ -1,0 +1,54 @@
+The Bachelor of Computer Science (abbreviated BCompSc or BCS) is a bachelor's degree for completion of an undergraduate program in computer science. In general, computer science degree programs emphasize the mathematical and theoretical foundations of computing.
+
+
+== Typical requirements ==
+Because computer science is a wide field, courses required to earn a bachelor of computer science degree vary. A typical list of course requirements includes topics such as:
+
+Computer programming
+Programming paradigms
+Algorithms
+Data structures
+Logic & Computation
+Computer architecture
+Some schools may place more emphasis on mathematics and require additional courses such as:
+
+Linear algebra
+Calculus
+Probability theory and statistics
+Combinatorics and discrete mathematics
+Differential calculus and mathematics
+Beyond the basic set of computer science courses, students can typically choose additional courses from a variety of different fields, such as:
+
+Theory of computation
+Operating systems
+Numerical computation
+Compilers, compiler design
+Real-time computing
+Distributed systems
+Computer networking
+Data communication
+Computer graphics
+Artificial intelligence
+Human-computer interaction
+Information theory
+Software testing
+Information assurance
+Quality assurance
+Some schools allow students to specialize in a certain area of computer science.
+
+
+== Related degrees ==
+Bachelor of Software Engineering
+Bachelor of Science in Information Technology
+Bachelor of Computing
+Bachelor of Information Technology
+Bachelor of Computer Information Systems
+
+
+== See also ==
+Computer science
+Computer science and engineering
+Bachelor of Business Information Systems
+
+
+== References ==

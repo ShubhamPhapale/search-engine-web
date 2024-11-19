@@ -1,0 +1,39 @@
+The terms foobar (), foo, bar, baz, qux, quux, and others are used as metasyntactic variables and placeholder names in computer programming or computer-related documentation. They have been used to name entities such as variables, functions, and commands whose exact identity is unimportant and serve only to demonstrate a concept.
+The style guide for Google developer documentation recommends against using them as example project names because they are unclear and can cause confusion.
+
+
+== History and etymology ==
+It is possible that foobar is a playful allusion to the World War II-era military slang FUBAR (Fucked Up Beyond All Recognition).
+According to a RFC from the Internet Engineering Task Force, the word FOO originated as a nonsense word with its earliest documented use in the 1930s comic Smokey Stover by Bill Holman. Holman states that he used the word due to having seen it on the bottom of a jade Chinese figurine in San Francisco Chinatown, purportedly signifying "good luck". If true, this is presumably related to the Chinese word fu ("福", sometimes transliterated foo, as in foo dog), which can mean happiness or blessing.
+The first known use of the terms in print in a programming context appears in a 1965 edition of MIT's Tech Engineering News. The use of foo in a programming context is generally credited to the Tech Model Railroad Club (TMRC) of MIT from c. 1960. In the complex model system, there were scram switches located at numerous places around the room that could be thrown if something undesirable was about to occur, such as a train moving at full power towards an obstruction. Another feature of the system was a digital clock on the dispatch board. When someone hit a scram switch, the clock stopped and the display was replaced with the word "FOO"; at TMRC the scram switches are, therefore, called "Foo switches". Because of this, an entry in the 1959 Dictionary of the TMRC Language went something like this: "FOO: The first syllable of the misquoted sacred chant phrase 'foo mane padme hum.' Our first obligation is to keep the foo counters turning." One book describing the MIT train room describes two buttons by the door labeled "foo" and "bar". These were general-purpose buttons and were often repurposed for whatever fun idea the MIT hackers had at the time, hence the adoption of foo and bar as general-purpose variable names. An entry in the Abridged Dictionary of the TMRC Language states:
+
+Multiflush: stop-all-trains-button. Next best thing to the red door button. Also called FOO. Displays "FOO" on the clock when used.
+Foobar was used as a variable name in the Fortran code of Colossal Cave Adventure (1977 Crowther and Woods version). The variable FOOBAR was used to contain the player's progress in saying the magic phrase "Fee Fie Foe Foo", a phrase from an historical quatrain in the classic English fairy tale Jack and the Beanstalk. Intel also used the term foo in their programming documentation in 1978.
+
+
+== Examples in culture ==
+Foo Camp is an annual hacker convention.
+BarCamp, an international network of user-generated conferences.
+During the United States v. Microsoft Corp. trial, evidence was presented that Microsoft had tried to use the Web Services Interoperability organization (WS-I) as a means to stifle competition, including e-mails in which top executives including Bill Gates and Steve Ballmer referred to the WS-I using the codename "foo".
+foobar2000 is an audio player.
+
+
+== See also ==
+
+Alice and Bob
+Foo fighter
+Foo was here
+Fu (character)
+Lorem ipsum, similar placeholder text used outside programming
+xyzzy
+Category:Variable (computer science)
+
+
+== References ==
+
+
+== External links ==
+
+Google developer documentation style guide word list
+The Jargon File entry on "foobar", catb.org
+RFC 1639 – FTP Operation Over Big Address Records (FOOBAR)

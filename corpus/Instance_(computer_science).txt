@@ -1,0 +1,23 @@
+In computer science, an instance is an occurrence of a software element that is based on a type definition. When created, an occurrence is said to have been instantiated, and both the creation process and the result of creation are called instantiation.
+
+
+== Examples ==
+
+
+=== Class instance ===
+A class instance is an object-oriented programming (OOP) object created from a class. Each instance of a class shares a data layout but has its own memory allocation.
+
+
+=== Computer instance ===
+A computer instance is an occurrence of a virtual machine which typically includes storage, a virtual CPU.
+
+
+=== Polygonal model ===
+A computer graphics polygonal model can be instantiated in order to be drawn several times in different locations in a scene which can improve the performance of rendering since a portion of the work needed to display each instance is reused.
+
+
+=== Program instance ===
+In a POSIX-oriented operating system, program instance refers to an executing process. It is instantiated for a program via system calls such as fork() and exec(). Each executing process is an instance of a program which it has been instantiated from.
+
+
+== References ==

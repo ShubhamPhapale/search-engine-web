@@ -1,0 +1,85 @@
+In computer science, persistence refers to the characteristic of state of a system that outlives (persists more than) the process that created it. This is achieved in practice by storing the state as data in computer data storage. Programs have to transfer data to and from storage devices and have to provide mappings from the native programming-language data structures to the storage device data structures.
+Picture editing programs or word processors, for example, achieve state persistence by saving their documents to files.
+
+
+== Orthogonal or transparent persistence ==
+Persistence is said to be "orthogonal" or "transparent" when it is implemented as an intrinsic property of the execution environment of a program. An orthogonal persistence environment does not require any specific actions by programs running in it to retrieve or save their state.
+Non-orthogonal persistence requires data to be written and read to and from storage using specific instructions in a program, resulting in the use of persist as a transitive verb: On completion, the program persists the data.
+The advantage of orthogonal persistence environments is simpler and less error-prone programs.
+The term "persistent" was first introduced by Atkinson and Morrison in the sense of orthogonal persistence: they used an adjective rather than a verb to emphasize persistence as a property of the data, as distinct from an imperative action performed by a program. The use of the transitive verb "persist" (describing an action performed by a program) is a back-formation.  
+
+
+=== Adoption ===
+Orthogonal persistence is widely adopted in operating systems for hibernation and in platform virtualization systems such as VMware and VirtualBox for state saving.
+Research prototype languages such as PS-algol, Napier88, Fibonacci and pJama, successfully demonstrated the concepts along with the advantages to programmers.
+
+
+== Persistence techniques ==
+
+
+=== System images ===
+
+Using system images is the simplest persistence strategy. Notebook hibernation is an example of orthogonal persistence using a system image because it does not require any actions by the programs running on the machine. An example of non-orthogonal persistence using a system image is a simple text editing program executing specific instructions to save an entire document to a file.
+Shortcomings: Requires enough RAM to hold the entire system state. State changes made to a system after its last image was saved are lost in the case of a system failure or shutdown. Saving an image for every single change would be too time-consuming for most systems, so images are not used as the single persistence technique for critical systems.
+
+
+=== Journals ===
+
+Using journals is the second simplest persistence technique. Journaling is the process of storing events in a log before each one is applied to a system. Such logs are called journals.
+On startup, the journal is read and each event is reapplied to the system, avoiding data loss in the case of system failure or shutdown.
+The entire "Undo/Redo" history of user commands in a picture editing program, for example, when written to a file, constitutes a journal capable of recovering the state of an edited picture at any point in time.
+Journals are used by journaling file systems, prevalent systems and database management systems where they are also called "transaction logs" or "redo logs".
+Shortcomings: When journals are used exclusively, the entire (potentially large) history of all system events must be reapplied on every system startup. As a result, journals are often combined with other persistence techniques.
+
+
+=== Dirty writes ===
+This technique is the writing to storage of only those portions of system state that have been modified (are dirty) since their last write. Sophisticated document editing applications, for example, will use dirty writes to save only those portions of a document that were actually changed since the last save.
+Shortcomings: This technique requires state changes to be intercepted within a program. This is achieved in a non-transparent way by requiring specific storage-API calls or in a transparent way with automatic program transformation. This results in code that is slower than native code and more complicated to debug.
+
+
+== Persistence layers ==
+Any software layer that makes it easier for a program to persist its state is generically called a persistence layer. Most persistence layers will not achieve persistence directly but will use an underlying database management system.
+
+
+== System prevalence ==
+
+System prevalence is a technique that combines system images and transaction journals, mentioned above, to overcome their limitations.
+Shortcomings: A prevalent system must have enough RAM to hold the entire system state.
+
+
+== Database management systems (DBMSs) ==
+
+DBMSs use a combination of the dirty writes and transaction journaling techniques mentioned above. They provide not only persistence but also other services such as queries, auditing and access control.
+
+
+== Persistent operating systems ==
+Persistent operating systems are operating systems that remain persistent even after a crash or unexpected shutdown. Operating systems that employ this ability include
+
+KeyKOS
+EROS, the successor to KeyKOS
+Coyotos, successor to EROS
+Multics with its single-level store
+Phantom
+IBM System/38
+IBM i
+Grasshopper OS [1]
+Lua OS
+tahrpuppy-6.0.5
+
+
+== See also ==
+Persistent data
+Persistent data structure
+Persistent identifier
+Persistent memory
+Copy-on-write
+CRUD
+Java Data Objects
+Java Persistence API
+System prevalence
+Orthogonality
+Service Data Object
+Snapshot (computer storage)
+
+
+== References ==
