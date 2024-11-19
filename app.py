@@ -17,7 +17,7 @@ if os.path.exists(BASE_DIR + INDEX_FILE):
 else:
     corpus = search_engine.load_corpus(BASE_DIR + CORPUS_DIR)
     search_engine.build_index(corpus)
-    search_engine.save_index(BASE_DIR + INDEX_FILE)
+    search_engine.save_index()
 
 @app.route("/", methods=["GET", "POST"])
 def index():
