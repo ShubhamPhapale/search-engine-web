@@ -23,7 +23,7 @@ else:
 def index():
     if request.method == "POST":
         query = request.form["query"]
-        results = search_engine.search(query, top_k=5)
+        results = search_engine.search(query)
         corpus, files = search_engine.load_corpus(BASE_DIR + CORPUS_DIR)
 
         # Format and enumerate results in Python
@@ -33,7 +33,7 @@ def index():
                 "doc_name": files[doc_id],
                 "score": score,
             }
-            for rank, (doc_id, score) in enumerate(results, start=1)
+            for rank, (doc_id, score) in enumerate(results[:5], start=1)
         ]
 
         return render_template("results.html", query=query, results=formatted_results)
