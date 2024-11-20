@@ -15,7 +15,7 @@ search_engine = SearchEngine(BASE_DIR + INDEX_FILE)
 if os.path.exists(BASE_DIR + INDEX_FILE):
     search_engine.load_index()
 else:
-    corpus = search_engine.load_corpus(BASE_DIR + CORPUS_DIR)
+    corpus, files = search_engine.load_corpus(BASE_DIR + CORPUS_DIR)
     search_engine.build_index(corpus)
     search_engine.save_index()
 

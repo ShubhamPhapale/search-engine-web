@@ -18,7 +18,7 @@ class SearchEngine:
         try:
             # List all files in the directory
             files = [f for f in os.listdir(folder_path) if f.endswith('.txt')]
-            print(files)
+            # print(files)
             # Read each file in the folder
             for file_name in files:
                 file_path = os.path.join(folder_path, file_name)
