@@ -1,3 +1,6 @@
+# # Bug with building index was we were using corpus = load_corpus(corpus_folder) which was returning a tuple of corpus and files 
+# Bug with ordering of results documnet was the deployment machine files are stored in different order hence our local index file will not work on deployment machine
+
 from flask import Flask, render_template, request, send_from_directory
 from search_engine import SearchEngine
 import os
